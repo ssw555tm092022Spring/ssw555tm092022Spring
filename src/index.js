@@ -1,4 +1,5 @@
 import React from 'react';
+import 'antd/dist/antd.css'
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter,
@@ -11,26 +12,41 @@ import Home from './pages/Home'
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Website from "./pages/Website";
+import NavBar from "./pages/Common/NavBar";
 
-class Game extends React.Component {
+class Project extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            theme: "dark"
+        }
     }
 
+    changeTheme() {
+        console.log(23)
+        // change the theme of website
+        this.setState({
+            theme: this.state.theme === "dark" ? "light" : "dark"
+        })
+    }
 
     render() {
 
         return (
-            // router map
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Website />} />
-                    <Route path="home" element={<Home />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="website" element={<Website />} />
-                </Routes>
-            </BrowserRouter>
+            <div className="project" style={{background: this.state.theme === "dark" ? "#f0f2f4" : "#00dfc8"}}>
+                <BrowserRouter >
+                    <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
+                    <Routes>
+                        <Route path="/" element={<Website />} />
+                        <Route path="home" element={<Home />} />
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="website" element={<Website />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
+
+
         );
     }
 }
@@ -40,6 +56,6 @@ class Game extends React.Component {
 // ========================================
 
 ReactDOM.render(
-    <Game />,
+    <Project />,
     document.getElementById('root')
 );

@@ -1,15 +1,22 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { Button } from 'antd';
+import './NavBar.scss'
 
 class NavBar extends React.Component {
+
+
+
     render() {
         return (
             <div className="navbar">
-                <div>
+                <div className="logo">
                     <Link to="/website">Mind Relaxing Game</Link>
                 </div>
+
                 <nav>
-                    <ul id='MenuItems'>
+                    <ul className="menu-items" id='MenuItems'>
+                        <li><Button type="primary" onClick={() => this.props.changeTheme()}>Theme</Button></li>
                         <li><Link to="/website">Home</Link></li>
                         <li><Link to="/home">About Us</Link></li>
                         <li><Link to="/contact">Contact</Link></li>

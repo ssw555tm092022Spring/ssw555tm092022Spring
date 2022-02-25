@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../Home/index.scss';
-import NavBar from "../Home/NavBar";
 
 class Login extends React.Component {
 
@@ -37,7 +36,6 @@ class Login extends React.Component {
     render() {
         return (
             <div className="full-page">
-                <NavBar />
 
                 <div id='login-form' className='login-page'>
                     <div className="form-box">
@@ -48,20 +46,19 @@ class Login extends React.Component {
                         </div>
                         <form style={{left: this.state.xLeft}} id='login' className='input-group-login'>
                             <input type='text' className='input-field' placeholder='Email Id' required />
-                                <input type='password' className='input-field' placeholder='Enter Password' required />
-                                    <input type='checkbox' className='check-box' /><span>Remember Password</span>
-                                        <button type='submit' className='submit-btn'>Log in</button>
+                            <input type='password' className='input-field' placeholder='Enter Password' required />
+                            <input type='checkbox' className='check-box' /><span>Remember Password</span>
+                            <button type='submit' className='submit-btn'>Log in</button>
                         </form>
                         <form style={{left: this.state.yLeft}} id='register' className='input-group-register'>
                             <input type='text' className='input-field' placeholder='First Name' required />
-                                <input type='text' className='input-field' placeholder='Last Name ' required />
-                                    <input type='email' className='input-field' placeholder='Email Id' required />
-                                        <input type='password' className='input-field' placeholder='Enter Password'
-                                               required />
-                                            <input type='password' className='input-field'
-                                                   placeholder='Confirm Password' required />
-                                                <input type='checkbox' className='check-box' /><span>I agree to the terms and conditions</span>
-                                                    <button type='submit' className='submit-btn'>Register</button>
+                            <input type='text' className='input-field' placeholder='Last Name ' required />
+                            <input type='email' className='input-field' placeholder='Email Id' required />
+                            <input type='password' className='input-field' placeholder='Enter Password' required />
+                            <input type='password' className='input-field' placeholder='Confirm Password' required />
+                            <input type='checkbox' className='check-box' />
+                            <span className="agreement">I agree to the terms and conditions</span>
+                            <button type='submit' className='submit-btn'>Register</button>
                         </form>
                     </div>
                 </div>

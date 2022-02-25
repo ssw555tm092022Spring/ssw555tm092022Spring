@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from "react-router-dom";
-import NavBar from "./NavBar";
 import './index.scss';
 
 class Main extends React.Component {
@@ -12,7 +10,6 @@ class Main extends React.Component {
     render() {
         return (
             <div className="full-page">
-                <NavBar />
                 <div className="About">
                     <h1>
                         Mind Relaxing Game
