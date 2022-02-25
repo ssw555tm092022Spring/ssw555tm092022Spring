@@ -23,7 +23,6 @@ class Project extends React.Component {
     }
 
     changeTheme() {
-        console.log(23)
         // change the theme of website
         this.setState({
             theme: this.state.theme === "dark" ? "light" : "dark"
