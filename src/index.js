@@ -1,47 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from "react-router-dom";
 import './index.scss';
 import './reset.scss'
-import Main from './Main'
-
-
-function Square(props) {
-    return (
-        <button className="square" onClick={() => props.onClick()}>
-            {props.value}
-        </button>
-    )
-}
-
-class Board extends React.Component {
-
-    renderSquare(i) {
-        return <Square value={this.props.squares[i]} onClick={ () => this.props.handleClick(i) }/>;
-    }
-
-
-    render() {
-        return (
-            <div>
-                <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                </div>
-            </div>
-        );
-    }
-}
+import Home from './pages/Home'
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Website from "./pages/Website";
 
 class Game extends React.Component {
     constructor(props) {
@@ -52,7 +21,16 @@ class Game extends React.Component {
     render() {
 
         return (
-            <Main />
+            // router map
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Website />} />
+                    <Route path="home" element={<Home />} />
+                    <Route path="contact" element={<Contact />} />
+                    <Route path="login" element={<Login />} />
+                    <Route path="website" element={<Website />} />
+                </Routes>
+            </BrowserRouter>
         );
     }
 }
