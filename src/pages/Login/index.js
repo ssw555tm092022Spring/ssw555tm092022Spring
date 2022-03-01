@@ -33,6 +33,8 @@ class Login extends React.Component {
         })
     }
 
+
+
     render() {
         return (
             <div className="full-page">
@@ -47,8 +49,11 @@ class Login extends React.Component {
                         <form style={{left: this.state.xLeft}} id='login' className='input-group-login'>
                             <input type='text' className='input-field' placeholder='Email Id' required />
                             <input type='password' className='input-field' placeholder='Enter Password' required />
-                            <input type='checkbox' className='check-box' /><span>Remember Password</span>
-                            <button type='submit' className='submit-btn'>Log in</button>
+                            <input type='text' className='input-field' placeholder='Email' required />
+                  
+          <input type='checkbox' className='check-box' /><span>Remember Password</span>
+                            <button type='submit' className='submit-btn'>Log in</button> <br/>
+                            <button type='submit' className='submit-btn'>Log</button> 
                         </form>
                         <form style={{left: this.state.yLeft}} id='register' className='input-group-register'>
                             <input type='text' className='input-field' placeholder='First Name' required />
@@ -56,9 +61,10 @@ class Login extends React.Component {
                             <input type='email' className='input-field' placeholder='Email Id' required />
                             <input type='password' className='input-field' placeholder='Enter Password' required />
                             <input type='password' className='input-field' placeholder='Confirm Password' required />
-                            <input type='checkbox' className='check-box' />
-                            <span className="agreement">I agree to the terms and conditions</span>
-                            <button type='submit' className='submit-btn'>Register</button>
+                            <input type='checkbox' className='check-box' /><span>I agree to the terms and conditions</span>                          
+                            <button type='submit' className='submit-btn'>Privacy statement and User agreement</button> <br/>
+                            <button type='submit' className='submit-btn'>Register</button> <br/>
+                            <button type='submit' className='submit-btn'>Continue As Guest</button>
                         </form>
                     </div>
                 </div>
