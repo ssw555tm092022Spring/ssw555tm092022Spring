@@ -9,4 +9,4 @@ Following are the contributing members: <br> 1. Yinda Yang <br> 2. Jinming Shi <
     [Node](https://nodejs.org/en/),
 + cd  ~/ssw555tm092022Spring/
 + sudo npm install
-+ sudo npm run dev
++ sudo npm run start
