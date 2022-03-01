@@ -32,7 +32,7 @@ class Project extends React.Component {
     render() {
 
         return (
-            <div className="project" style={{background: this.state.theme === "dark" ? "#f0f2f4" : "#00dfc8"}}>
+            <div className="project" style={{background: this.state.theme === "dark" ? "#C996CC" : "#424874"}}>
                 <BrowserRouter >
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
                     <Routes>

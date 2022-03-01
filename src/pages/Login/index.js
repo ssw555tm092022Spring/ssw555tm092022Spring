@@ -49,11 +49,11 @@ class Login extends React.Component {
                         <form style={{left: this.state.xLeft}} id='login' className='input-group-login'>
                             <input type='text' className='input-field' placeholder='Email Id' required />
                             <input type='password' className='input-field' placeholder='Enter Password' required />
-                            <input type='text' className='input-field' placeholder='Email' required />
+
                   
           <input type='checkbox' className='check-box' /><span>Remember Password</span>
                             <button type='submit' className='submit-btn'>Log in</button> <br/>
-                            <button type='submit' className='submit-btn'>Log</button> 
+                            <button type='submit' className='submit-btn' >Continue As Guest</button> 
                         </form>
                         <form style={{left: this.state.yLeft}} id='register' className='input-group-register'>
                             <input type='text' className='input-field' placeholder='First Name' required />

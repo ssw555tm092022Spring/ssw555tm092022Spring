@@ -11,11 +11,11 @@ class Contact extends React.Component {
             <div className="full-page">
                 <div className="Contact">
                     <h1>
-                        Email Address
+                        Contact Us
                     </h1>
 
                     <div>
-                        You can send us a mail at xyz@stevens.edu
+                        If you have any queries, you can mail us at calmify@calmify.com
                     </div>
 
                 </div>
