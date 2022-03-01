@@ -25,3 +25,4 @@ yarn-error.log*
 .idea/modules.xml
 .idea/ssw555tm092022Spring.iml
 .idea/vcs.xml
+package-lock.json
