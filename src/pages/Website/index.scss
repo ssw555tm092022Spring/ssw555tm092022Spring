@@ -1,0 +1,48 @@
+.full-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .game-container{
+    width: 60vh;
+    height: 60vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    .game-block{
+      //border: 2px solid black;
+
+      position: relative;
+      .flip-item{
+        width: 90%;
+        height: 90%;
+        transition: all .5s;
+        backface-visibility:hidden;
+        transform-style:preserve-3d;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .flip-item-front{
+        transform:rotateY(0deg);
+        z-index:2;
+      }
+      .flip-item-back{
+        background: #777777;
+        transform:rotateY(180deg);
+        z-index: 1;
+      }
+      .flip-item-front.rotated{
+        z-index:1;
+        transform:rotateY(180deg);
+      }
+      .flip-item-back.rotated{
+        z-index:2;
+        transform:rotateY(0deg);
+      }
+    }
+  }
+}
