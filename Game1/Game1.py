@@ -1,4 +1,4 @@
-pip install playsound==1.2.2
+#pip install playsound==1.2.2
 from tkinter import *
 #import tkSnack
 import random
@@ -8,7 +8,7 @@ root=Tk()
 root.geometry("500x500")
 
 # create matches
-matches = ['./1.mp3','./1.mp3','./2.mp3','./2.mp3','./3.mp3','./3.mp3','./4.mp3','./4.mp3','./5.mp3','./5.mp3','./6.mp3','./6.mp3']
+matches = ['Game1/1.mp3','Game1/1.mp3','Game1/2.mp3','Game1/2.mp3','Game1/3.mp3','Game1/3.mp3','Game1/4.mp3','Game1/4.mp3','Game1/5.mp3','Game1/5.mp3','Game1/6.mp3','Game1/6.mp3']
 
 abc = ['1','1','2','2','3','3','4','4','5','5','6','6']
 # Shuffle our matches
