@@ -22,6 +22,10 @@ const IMAGES = [
     [require('../../statics/Gamepics/15.jpg'), 15],
     [require('../../statics/Gamepics/16.jpg'), 16],
 ]
+
+const audio1 = new Audio("/cheers/cheers1.mp3")
+const audio2 = new Audio("/cheers/cheers2.mp3")
+
 class Website extends React.Component {
     constructor(props) {
         super(props);
@@ -63,7 +67,8 @@ class Website extends React.Component {
             cards_per_row,
             dataReady: false,
             selection1: -1, // first selected pic
-            selection2: -1 // second selected pic
+            selection2: -1, // second selected pic
+            audio_url: '', // cheers audio url
         }
         setTimeout(() => {
             this.flipAll()
@@ -82,6 +87,25 @@ class Website extends React.Component {
         })
     }
 
+    playCheerVoice() {
+        this.setState({
+            audio_url: this.state.audio_url === 1 ? 2 : 1
+        })
+        if (this.state.audio_url === 1) {
+            audio1.play()
+            setTimeout(() => {
+                audio1.pause()
+                audio1.load()
+            }, 2000)
+        } else {
+            audio2.play()
+            setTimeout(() => {
+                audio2.pause()
+                audio2.load()
+            }, 2000)
+        }
+    }
+
     flip(boardIndex) {
         // handle picture click
         if (!this.state.dataReady) {// forbidden click before game started
@@ -96,6 +120,7 @@ class Website extends React.Component {
                 dataReady: false
             })
             if (this.state.cardsInfo[boardIndex].id === this.state.selection1) { // card matches
+                this.playCheerVoice();
                 setTimeout(() => {
                     this.setState({
                         cardsInfo: cardsInfo.map((item, index) => (boardIndex === index) || (item.id === this.state.selection1) ? {...item, found: true} : item),
@@ -135,6 +160,7 @@ class Website extends React.Component {
     render() {
         return (
             <div className="full-page">
+                <audio id="audio" src={this.state.audio_url}/>
                 <div className="game-container">
                     {
                         this.state.cardsInfo.map((item, index)  => {
