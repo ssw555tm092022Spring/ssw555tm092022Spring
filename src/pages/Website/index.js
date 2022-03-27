@@ -96,13 +96,13 @@ class Website extends React.Component {
             setTimeout(() => {
                 audio1.pause()
                 audio1.load()
-            }, 2000)
+            }, 2500)
         } else {
             audio2.play()
             setTimeout(() => {
                 audio2.pause()
                 audio2.load()
-            }, 2000)
+            }, 2500)
         }
     }
 

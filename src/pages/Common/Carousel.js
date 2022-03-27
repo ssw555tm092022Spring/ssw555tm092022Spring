@@ -28,7 +28,7 @@ class CarouselComponent extends React.Component {
             <Carousel className="carousel" autoplay dots={false}>
                 {
                     this.state.encouraging_words.map((item, index) => {
-                        return <div key={index}>{item}</div>
+                        return <div className="carousel-words" key={index}>{item}</div>
                     })
                 }
             </Carousel>
