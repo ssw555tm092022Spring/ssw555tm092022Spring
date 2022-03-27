@@ -14,25 +14,53 @@ import Login from "./pages/Login";
 import Website from "./pages/Website";
 import NavBar from "./pages/Common/NavBar";
 
+
 class Project extends React.Component {
     constructor(props) {
         super(props);
+        const originPics = [
+            require('./statics/BgPics/bg1.jpg'),
+            require('./statics/BgPics/bg2.jpg'),
+            require('./statics/BgPics/bg3.jpg'),
+            require('./statics/BgPics/bg4.jpg'),
+            require('./statics/BgPics/bg5.jpg'),
+            require('./statics/BgPics/bg6.jpg'),
+            require('./statics/BgPics/bg7.jpg'),
+
+        ]
         this.state = {
-            theme: "dark"
+            originPics,
+            theme: "dark",
+            bgPics: JSON.parse(JSON.stringify(originPics)),
+            bgPic: ""
         }
+    }
+    componentDidMount() {
+        this.updateBg();
+    }
+
+    updateBg() {
+
+        const bgPics = this.state.bgPics.length === 0 ? [...this.state.originPics]: [...this.state.bgPics]
+        console.log(bgPics)
+        let bgIndex = Math.floor(Math.random() * bgPics.length)
+        let bgPic = bgPics.splice(bgIndex, 1)[0]
+
+        this.setState({
+            bgPics,
+            bgPic
+        })
     }
 
     changeTheme() {
         // change the theme of website
-        this.setState({
-            theme: this.state.theme === "dark" ? "light" : "dark"
-        })
+        this.updateBg()
     }
 
     render() {
 
         return (
-            <div className="project" style={{background: this.state.theme === "dark" ? "#C996CC" : "#424874"}}>
+            <div className="project" style={{background: `url(${this.state.bgPic}) no-repeat`}}>
                 <BrowserRouter >
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
                     <Routes>

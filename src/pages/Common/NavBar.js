@@ -54,9 +54,9 @@ class NavBar extends React.Component {
                         <li><Link to="/website">Home</Link></li>
                         <li><Link to="/home">About Us</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
-                        <li>
-                            <Link to="/login">Login</Link>
-                        </li>
+                        {/*<li>*/}
+                        {/*    <Link to="/login">Login</Link>*/}
+                        {/*</li>*/}
                     </ul>
                 </nav>
             </div>
