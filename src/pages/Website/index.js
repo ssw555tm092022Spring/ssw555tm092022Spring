@@ -2,7 +2,7 @@ import React from 'react';
 import '../Home/index.scss';
 import './index.scss'
 import Carousel from '../Common/Carousel'
-// import Live2d from "../Common/Live2d";
+import Live2d from "../Common/Live2d";
 
 const IMAGES = [
     [require('../../statics/Gamepics/1.jpg'), 1],
@@ -156,6 +156,7 @@ class Website extends React.Component {
 
                 </div>
                 <Carousel/>
+                <Live2d/>
             </div>
         )
     }
