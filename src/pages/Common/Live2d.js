@@ -8,12 +8,12 @@ class Live2d extends React.Component {
 
     componentDidMount() {
         const script = document.createElement("script")
-        script.src = "/Resources/live2d.js"
+        script.src = process.env.PUBLIC_URL + "/Resources/live2d.js"
         script.async = true
 
         document.body.appendChild(script)
         setTimeout(() => {
-            window.loadlive2d("live2d", '/Resources/wanko/wanko.model.json');
+            window.loadlive2d("live2d", process.env.PUBLIC_URL + '/Resources/wanko/wanko.model.json');
         }, 500)
     }
 

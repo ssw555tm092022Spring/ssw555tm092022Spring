@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css'
 import ReactDOM from 'react-dom';
 import {
-    BrowserRouter,
+    HashRouter,
     Routes,
     Route,
 } from "react-router-dom";
@@ -61,7 +61,7 @@ class Project extends React.Component {
 
         return (
             <div className="project" style={{background: `url(${this.state.bgPic}) no-repeat`}}>
-                <BrowserRouter >
+                <HashRouter basename="/">
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
                     <Routes>
                         <Route path="/" element={<Website />} />
@@ -70,7 +70,7 @@ class Project extends React.Component {
                         <Route path="login" element={<Login />} />
                         <Route path="website" element={<Website />} />
                     </Routes>
-                </BrowserRouter>
+                </HashRouter>
             </div>
 
 

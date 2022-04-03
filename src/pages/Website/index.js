@@ -23,8 +23,8 @@ const IMAGES = [
     [require('../../statics/Gamepics/16.jpg'), 16],
 ]
 
-const audio1 = new Audio("/cheers/cheers1.mp3")
-const audio2 = new Audio("/cheers/cheers2.mp3")
+const audio1 = new Audio(require('../../statics/cheers/cheers1.mp3'))
+const audio2 = new Audio(require('../../statics/cheers/cheers1.mp3'))
 
 class Website extends React.Component {
     constructor(props) {
