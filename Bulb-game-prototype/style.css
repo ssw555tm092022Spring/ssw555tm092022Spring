@@ -65,6 +65,45 @@ body{
     cursor:crosshair;
   }
 
+  .pajaro1{top:50px;
+    animation-delay: -2s!important;
+    transform:scale(0.9);
+  }
+  .pajaro2{
+    top:100px;
+    animation-delay: -1s!important;
+    transform:scale(0.8); 
+  }
+  .pajaro3{
+    top:200px;
+    animation-delay: -3s!important;
+    transform:scale(1.4); 
+  }
+  
+  .pajaro4{top:50px;
+    animation-delay: -12s!important;
+    transform:scale(0.9);
+  }
+  .pajaro5{
+    top:100px;
+    animation-delay: -16s!important;
+    transform:scale(0.5); 
+  }
+  .pajaro6{
+    top:200px;
+    animation-delay: -20s!important;
+    transform:scale(1.4); 
+  }
+  
+  @keyframes move{
+  0%{left:0%;}
+  20%{left:20%;top:50%; }
+  40%{top:30%; left:60%;}
+  60%{top:80%;left:80%;}
+  80%{top:10%; left:20%:}
+  100%{top:30%; left:20%; }
+  }
+
   .timer{
     background-color:#333; width:300px;height:50px;
     position:fixed;
