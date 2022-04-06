@@ -64,3 +64,111 @@ body{
     left:0;  
     cursor:crosshair;
   }
+
+  .timer{
+    background-color:#333; width:300px;height:50px;
+    position:fixed;
+  }
+
+
+  .timer span{
+    display:block;
+    background: rgb(223, 164, 164);
+    width:300px; height:50px;
+    animation:timer 100s linear;
+  }
+
+  .timer span:before{  
+    content:"Time Left";
+    display:block;
+    position:absolute; z-index:3;
+    left:0; 
+    right:0;
+    top:0;
+    bottom:0;
+    text-align:center;
+    line-height:50px;
+    font-size:25px;
+    color:rgb(0, 255, 242);
+  }
+  @keyframes timer{
+  0%{width:10px;}
+  100%{width:300px; display:block;}
+  }
+
+
+  .gameover{
+    position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
+    animation:gameover 20s linear forwards;
+    font-size:20px; color:white;  text-align:center; 
+    text-indent:0;  
+    line-height:500px;
+  }
+
+  @keyframes gameover{
+  0%{left:-5000px;bottom:100%;}
+  97%{left:-5000px;bottom:100%;}
+  100%{ left:0px;}
+  }
+
+  footer{position:fixed; left:0; bottom:0; padding:10px 20px;}
+  footer svg{vertical-align:middle;}
+  footer a{text-decoration:none;  font-size:20px; color:rgba(29,161,242,1.00); vertical-align:middle;}
+
+  .pajaro{
+    background:rgb(179, 46, 46);
+    border-radius: 50% ;
+    color:white;
+    line-height:50px;
+    letter-spacing: 2px;
+    font-size:0.8em;
+    text-align:center;
+    position:absolute;
+
+    margin-top:-20px; margin-left:-10px;
+    width:50px; height:50px;
+    animation:planeo 2s linear infinite;
+    z-index:999;
+  }
+
+  .pajaro:after,
+  .pajaro:before{
+    content:"";
+    position:absolute;
+    top:50%; left:50%;
+  }
+
+  .pajaro:after{
+    border-radius: 100% 100% 0 0;
+    width:100px; height:100px;
+    margin-top:-7px; margin-left:-50px;
+    transform-origin: 100% 0%;
+
+  }
+
+
+  .pajaro:before{
+
+    border-radius: 100% 0% 20% 0%;
+    margin-top:3px; margin-left:-4px;
+    width:6px; height:6px;
+    transform:rotateZ(45deg);
+  }
+
+
+  @keyframes alas {
+    50%{
+      transform:rotateX(-1440deg);
+    }
+  }
+
+  @keyframes planeo {
+    40%{
+      transform:rotateZ(2deg) translateX(2px) translateY(10px) translateZ(0);
+      line-height:16px;
+      font-size:0.6em;
+    }
+    80%{
+      transform:rotateZ(-2deg) translateX(5px) translateY(8px) translateZ(0);
+    }
+  }
