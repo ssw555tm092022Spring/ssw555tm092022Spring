@@ -14,3 +14,53 @@ body{
   h1{margin:0; text-align:center;}
   h2{position:fixed; right:20px; bottom:0; font-size:18px; color:red;}
   
+  .wrapper{  
+    height:500px;
+    background: -webkit-linear-gradient(top, #000000 0%,#a55c1b 100%);
+    position:relative;
+    cursor:crosshair;
+  }
+  
+  .input-circle:checked{
+    counter-increment:birds;
+  }
+  
+  .sum{position:fixed; left:45%; top:60px; font-size:24px; fonot-weight:bold;}
+  
+  
+  .sum:after{
+    content: counter(birds);
+  }
+  
+  .input-circle ~ .pajaro{
+    opacity:0;
+    transition:0.5s  cubic-bezier(0,0.5,1,0);
+    animation: move 8s infinite alternate;
+  }
+  .input-circle1:not(:checked) ~ .pajaro1,
+  .input-circle2:not(:checked) ~ .pajaro2,
+  .input-circle3:not(:checked) ~ .pajaro3,
+  .input-circle4:not(:checked) ~ .pajaro4,
+  .input-circle5:not(:checked) ~ .pajaro5,
+  .input-circle6:not(:checked) ~ .pajaro6
+  {
+    opacity:1; 
+  }
+  
+  
+  .input-circle1:checked ~ .pajaro1 span,
+  .input-circle2:checked ~ .pajaro2 span,
+  .input-circle3:checked ~ .pajaro3 span,
+  .input-circle4:checked ~ .pajaro4 span,
+  .input-circle5:checked ~ .pajaro5 span,
+  .input-circle6:checked ~ .pajaro6 span
+  {
+    display:block;
+    
+  }
+  
+  .pajaro{   
+    position:absolute;
+    left:0;  
+    cursor:crosshair;
+  }
