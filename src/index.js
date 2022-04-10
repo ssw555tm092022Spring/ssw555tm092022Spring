@@ -10,7 +10,6 @@ import './index.scss';
 import './reset.scss'
 import Home from './pages/Home'
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import Website from "./pages/Website";
 import NavBar from "./pages/Common/NavBar";
 
@@ -19,14 +18,14 @@ class Project extends React.Component {
     constructor(props) {
         super(props);
         const originPics = [
-            require('./statics/BgPics/bg1.jpg'),
-            require('./statics/BgPics/bg2.jpg'),
-            require('./statics/BgPics/bg3.jpg'),
-            require('./statics/BgPics/bg4.jpg'),
-            require('./statics/BgPics/bg5.jpg'),
-            require('./statics/BgPics/bg6.jpg'),
-            require('./statics/BgPics/bg7.jpg'),
-
+            "#ffb6b9",
+            "#fae3d9",
+            "#bbded6",
+            "#8ac6d1",
+            "#fff1ac",
+            "#f9bcdd",
+            "#d5a4cf",
+            "#b689b0"
         ]
         this.state = {
             originPics,
@@ -60,15 +59,14 @@ class Project extends React.Component {
     render() {
 
         return (
-            <div className="project" style={{background: `url(${this.state.bgPic}) no-repeat`}}>
+            <div className="project" style={{background: `${this.state.bgPic}`}}>
                 <HashRouter basename="/">
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
                     <Routes>
                         <Route path="/" element={<Website />} />
-                        <Route path="home" element={<Home />} />
-                        <Route path="contact" element={<Contact />} />
-                        <Route path="login" element={<Login />} />
-                        <Route path="website" element={<Website />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/website" element={<Website />} />
                     </Routes>
                 </HashRouter>
             </div>
