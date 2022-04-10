@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "./static/css/main.844f7091.css",
+    "main.js": "./static/js/main.cf236e41.js",
+    "static/media/Canon.mp3": "./static/media/Canon.c70fec7e7352c98a4836.mp3",
+    "static/media/Carrying you.mp3": "./static/media/Carrying you.306248d834c138a930f9.mp3",
+    "static/media/Weightless.mp3": "./static/media/Weightless.53f0e58b94fae30e4e90.mp3",
+    "static/media/Canon.png": "./static/media/Canon.5c3f5f90c7043c385fd4.png",
+    "static/media/Carrying you.png": "./static/media/Carrying you.45bf945bd928de663d6c.png",
+    "static/media/Weightless.png": "./static/media/Weightless.0bf9d93cffe6b4c92116.png",
+    "static/media/7.jpg": "./static/media/7.256ebba3826a70914481.jpg",
+    "static/media/10.jpg": "./static/media/10.57a52812122f468ec98a.jpg",
+    "static/media/cheers1.mp3": "./static/media/cheers1.01b7cc32e21da0614fe1.mp3",
+    "static/media/9.jpg": "./static/media/9.6e6ed7a70ffe3e2ea8fe.jpg",
+    "static/media/12.jpg": "./static/media/12.f66640f7e2126dc1bc4e.jpg",
+    "static/media/11.jpg": "./static/media/11.9cf424e0f773fe47d1bf.jpg",
+    "static/media/5.jpg": "./static/media/5.8da24b8beceb96794c2d.jpg",
+    "static/media/6.jpg": "./static/media/6.faee6945aa5d9f17f8c6.jpg",
+    "static/media/2.jpg": "./static/media/2.7fbacaa789b92609c7e7.jpg",
+    "static/media/3.jpg": "./static/media/3.43c2a604cab0395b4e1c.jpg",
+    "static/media/1.jpg": "./static/media/1.46ff23bc09162fb15a26.jpg",
+    "static/media/4.jpg": "./static/media/4.a2419790bc2e15529734.jpg",
+    "static/media/13.jpg": "./static/media/13.fd8e3dc93c40f91c8495.jpg",
+    "static/media/8.jpg": "./static/media/8.7b49aec77213054081a0.jpg",
+    "static/media/14.jpg": "./static/media/14.a90cddca2f6e65569da4.jpg",
+    "index.html": "./index.html",
+    "main.844f7091.css.map": "./static/css/main.844f7091.css.map",
+    "main.cf236e41.js.map": "./static/js/main.cf236e41.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.844f7091.css",
+    "static/js/main.cf236e41.js"
+  ]
+}

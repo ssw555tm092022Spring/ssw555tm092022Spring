@@ -10,7 +10,6 @@ import './index.scss';
 import './reset.scss'
 import Home from './pages/Home'
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import Website from "./pages/Website";
 import NavBar from "./pages/Common/NavBar";
 
@@ -65,10 +64,9 @@ class Project extends React.Component {
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
                     <Routes>
                         <Route path="/" element={<Website />} />
-                        <Route path="home" element={<Home />} />
-                        <Route path="contact" element={<Contact />} />
-                        <Route path="login" element={<Login />} />
-                        <Route path="website" element={<Website />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/website" element={<Website />} />
                     </Routes>
                 </HashRouter>
             </div>
