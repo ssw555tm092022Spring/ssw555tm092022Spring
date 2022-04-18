@@ -39,6 +39,10 @@ class NavBar extends React.Component {
 
     }
 
+    jumpFishGame() {
+        window.location.href = window.location.href.replace("build/index.html", "Game3/index.html")
+    }
+
     render() {
         return (
             <div className="navbar">
@@ -51,6 +55,7 @@ class NavBar extends React.Component {
                     <ul className="menu-items" id='MenuItems'>
                         <div id="aplayer"></div>
                         <li><Button type="primary" onClick={() => this.props.changeTheme()}>✧</Button></li>
+                        <li><Button type="primary" onClick={() => this.jumpFishGame()}>fish</Button></li>
                         <li><Link to="/website">Home</Link></li>
                         {/*<li><Link to="/home">About Us</Link></li>*/}
                         {/*<li><Link to="/contact">Contact</Link></li>*/}

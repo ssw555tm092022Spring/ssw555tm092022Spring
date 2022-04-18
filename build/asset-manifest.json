@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.844f7091.css",
-    "main.js": "./static/js/main.cf236e41.js",
+    "main.js": "./static/js/main.1608096f.js",
     "static/media/Canon.mp3": "./static/media/Canon.c70fec7e7352c98a4836.mp3",
     "static/media/Carrying you.mp3": "./static/media/Carrying you.306248d834c138a930f9.mp3",
     "static/media/Weightless.mp3": "./static/media/Weightless.53f0e58b94fae30e4e90.mp3",
@@ -25,10 +25,10 @@
     "static/media/14.jpg": "./static/media/14.a90cddca2f6e65569da4.jpg",
     "index.html": "./index.html",
     "main.844f7091.css.map": "./static/css/main.844f7091.css.map",
-    "main.cf236e41.js.map": "./static/js/main.cf236e41.js.map"
+    "main.1608096f.js.map": "./static/js/main.1608096f.js.map"
   },
   "entrypoints": [
     "static/css/main.844f7091.css",
-    "static/js/main.cf236e41.js"
+    "static/js/main.1608096f.js"
   ]
 }
