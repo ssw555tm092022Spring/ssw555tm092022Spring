@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import Website from "./pages/Website";
 import NavBar from "./pages/Common/NavBar";
 import Footer from "./pages/Common/Footer"
+import {Button} from "antd";
 
 class Project extends React.Component {
     constructor(props) {
@@ -31,7 +32,8 @@ class Project extends React.Component {
             originPics,
             theme: "dark",
             bgPics: JSON.parse(JSON.stringify(originPics)),
-            bgPic: ""
+            bgPic: "",
+            showMemoryGame: false
         }
     }
     componentDidMount() {
@@ -57,12 +59,24 @@ class Project extends React.Component {
     }
 
     render() {
+        let game, choice
+        if (this.state.showMemoryGame) {
+            game = <Website></Website>
+            choice = ''
+        } else {
+            game = ''
+            choice = <div className="choice-box">
+                <Button type="primary" onClick={() => this.setState({showMemoryGame: true})}>memory game</Button>
+                <Button type="primary" onClick={() => window.location.href = window.location.href.replace("build/index.html", "Game3/index.html")}>bubble game</Button>
+            </div>
+        }
 
         return (
             <div className="project" style={{background: `${this.state.bgPic}`}}>
                 <HashRouter basename="/">
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
-                    <Website></Website>
+                    {choice}
+                    {game}
                     <Footer></Footer>
                 </HashRouter>
             </div>
