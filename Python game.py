@@ -56,7 +56,7 @@ def game(n):
                 answer_list = []
                 answer_dict = {}
             else:
-                my_label.config(text="DOH !")
+                my_label.config(text="Congratulations !")
                 count = 0
                 answer_list = []
 
