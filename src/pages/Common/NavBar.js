@@ -51,16 +51,8 @@ class NavBar extends React.Component {
                     <Link to="/website"><strong>Calmify</strong></Link>
                 </div>
 
-                <nav>
-                    <ul className="menu-items" id='MenuItems'>
-                        <div id="aplayer"></div>
-                        <li><Button type="primary" onClick={() => this.props.changeTheme()}>✧</Button></li>
-                        <li><Button type="primary" onClick={() => this.jumpFishGame()}>fish</Button></li>
-                        <li><Link to="/website">Home</Link></li>
-                        {/*<li><Link to="/home">About Us</Link></li>*/}
-                        {/*<li><Link to="/contact">Contact</Link></li>*/}
-                    </ul>
-                </nav>
+                <div id="aplayer" className="aplayer"></div>
+                <Button type="primary" onClick={() => this.props.changeTheme()}>Mode</Button>
             </div>
         )
     }

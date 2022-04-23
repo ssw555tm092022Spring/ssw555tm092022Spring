@@ -12,7 +12,7 @@ import Home from './pages/Home'
 import Contact from "./pages/Contact";
 import Website from "./pages/Website";
 import NavBar from "./pages/Common/NavBar";
-
+import Footer from "./pages/Common/Footer"
 
 class Project extends React.Component {
     constructor(props) {
@@ -62,12 +62,8 @@ class Project extends React.Component {
             <div className="project" style={{background: `${this.state.bgPic}`}}>
                 <HashRouter basename="/">
                     <NavBar theme={this.state.theme} changeTheme={() => this.changeTheme()} />
-                    <Routes>
-                        <Route path="/" element={<Website />} />
-                        <Route path="/home" element={<Home />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/website" element={<Website />} />
-                    </Routes>
+                    <Website></Website>
+                    <Footer></Footer>
                 </HashRouter>
             </div>
 
