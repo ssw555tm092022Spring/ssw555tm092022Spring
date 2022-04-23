@@ -179,7 +179,7 @@ enemyImage.src = 'enemy1.png';
 
 class Enemy {
     constructor(){
-        this.x = canvas.width - 200;
+        this.x = canvas.width + 200;
         this.y = Math.random() * (canvas.height - 150) + 90;
         this.radius = 60;
         this.speed = Math.random() * 2 + 2;
