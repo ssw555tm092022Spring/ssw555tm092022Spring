@@ -67,7 +67,8 @@ class Project extends React.Component {
             game = ''
             choice = <div className="choice-box">
                 <Button type="primary" onClick={() => this.setState({showMemoryGame: true})}>memory game</Button>
-                <Button type="primary" onClick={() => window.location.href = window.location.href.replace("build/index.html", "Game3/index.html")}>bubble game</Button>
+                <Button type="primary" onClick={() => window.location.href = window.location.href.replace("build/index.html", "Bulb-game-prototype/index.html")}>bubble game</Button>
+                <Button type="primary" onClick={() => window.location.href = window.location.href.replace("build/index.html", "Game3/index.html")}>fish game</Button>
             </div>
         }
 
