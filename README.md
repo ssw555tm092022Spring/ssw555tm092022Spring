@@ -10,3 +10,6 @@ Following are the contributing members: <br> 1. Yinda Yang <br> 2. Jinming Shi <
 + cd  ~/ssw555tm092022Spring/
 + sudo npm install
 + sudo npm run start
+
+<br>OR<br>
+Go to build <br> run index.html
